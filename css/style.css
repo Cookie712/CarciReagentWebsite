@@ -47,16 +47,35 @@ html {
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 2.5vw 0;
+    padding: 2.5vw 10vh;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar.sticky {
+        padding: 1.5vw 0 !important;
+    }
+
+    .home .text {
+        margin-top: 20vh !important;
+    }
 }
 
 .navbar.sticky {
-    padding: 1.5vw 0;
-    background: var(--green);
+    padding: 1.5vw 10vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .lek4you p {
@@ -69,6 +88,10 @@ html {
     max-width: 150px;
 }
 
+.navbar .logo {
+    margin-left: 10vw;
+}
+
 .navbar .logo a {
     color: #000;
     font-size: 2.4rem;
@@ -78,16 +101,14 @@ html {
 .navbar .logo a span {
     color: var(--blue);
     transition: all 0.3s ease;
+    background: -webkit-linear-gradient(#333, var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navbar .logo a span.upper {
     vertical-align: super;
     font-size: 0.8em;
-}
-
-.navbar.sticky .logo a span,
-.navbar.sticky .lek4you p {
-    color: #fff;
 }
 
 .navbar .menu li {
@@ -98,7 +119,7 @@ html {
 .navbar .menu li a {
     color: #000;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
     margin-left: 2.5vw;
     transition: color 0.3s ease;
 }
@@ -107,61 +128,100 @@ html {
     color: var(--blue);
 }
 
-.navbar.sticky .menu li a:hover {
-    color: #fff;
-}
-
 /* home section */
 .home {
-    display: grid;
-    place-items: center;
     background: rgb(221, 221, 221);
     background-color: #ddd;
     height: 100vh;
     color: #000;
     min-height: 500px;
-    background-image: url(background.jpg);
+    background-image: url(../img/background3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.home .max-width {
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-    width: 100%;
-}
-
-.home .home-content .text {
-    font-size: 2.5rem;
-    margin: 5px 0;
-    font-weight: 700;
-}
-
-.home-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
 }
 
-.text {
-    flex: 1;
+.home .text {
+    border-radius: 10px;
 }
 
-.product-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+.home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #333;
 }
 
-.product-image img {
-    max-width: 120%;
-    height: auto;
-    max-height: 80vh;
+.home p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    margin-right: 10vw;
+    color: #555;
 }
 
-@media (max-width: 768px) {
-    .product-image {
+.home .logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home #product {
+    transform: rotate(1deg);
+}
+
+.home img {
+    display: block;
+    margin-right: 10vw;
+}
+
+@media (max-width: 1000px) {
+    .navbar .menu {
         display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home img[alt='Carci Reagent'] {
+        display: none;
+    }
+
+    .home .logo {
+        position: static;
+        transform: none !important;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .home .text {
+        margin-top: 30vh;
+        margin-left: 10vw;
+    }
+
+    .navbar .logo {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    .home img {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1650px) {
+    .home .text h1 {
+        font-size: 2em;
+    }
+
+    .home .text p {
+        font-size: 1.5em;
     }
 }
 
@@ -174,49 +234,11 @@ html {
     .menu-btn i.active:before {
         content: '\f00d';
     }
-
-    .home .home-content .text {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 690px) {
-    .home .home-content .text {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .home .home-content .text {
-        font-size: 1.8rem;
-    }
-}
-
-.home .home-content .text span {
-    color: var(--green);
-}
-
-@media (max-width: 947px) {
-    .home .home-content .text {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 690px) {
-    .home .home-content .text {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .home .home-content .text {
-        font-size: 1.8rem;
-    }
 }
 
 /*contact section*/
 .contact {
-    background: #ddd;
+    background: #fff;
 }
 
 .contact iframe {
@@ -238,22 +260,28 @@ html {
     padding: 0 20px;
 }
 
+.contact-info i {
+    color: white;
+}
+
 .contact-info a {
-    color: var(--green);
+    color: black;
 }
 
 .cart {
-    background: #2f3542;
+    background: white;
     padding: 0 20px;
     margin: 0 10px;
-    width: calc(33% - 20px);
+    width: calc(25% - 20px);
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: black;
     cursor: pointer;
+    border-radius: 15px;
+    border: 3px solid #ddd;
 }
 
 .cart-icon {
@@ -277,15 +305,14 @@ html {
     margin-top: 20px;
     font-weight: 300;
     letter-spacing: 2px;
-    max-height: 0;
-    opacity: 0;
+    max-height: 40;
+    opacity: 1;
     transition: 0.3s linear;
 }
 
-.cart:hover p {
+.cart:hover p,
+.cart:hover a {
     color: var(--green);
-    max-height: 40px;
-    opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
@@ -301,17 +328,14 @@ html {
 
 /* about section */
 .about {
-    height: 100%;
-    min-height: 100vh;
-}
-
-.about {
     display: grid;
     place-items: center;
     font-size: 1.1rem;
     line-height: 1.2;
-    background-color: #111;
+    background-color: #fff;
     color: #ddd;
+    height: 100%;
+    min-height: 100vh;
 }
 
 ul {
@@ -324,11 +348,11 @@ ul {
 }
 
 .main__heading {
-    font-weight: 600;
-    font-size: 2.25em;
+    font-weight: 700;
+    font-size: 3em;
     margin-bottom: 0.75em;
     text-align: center;
-    color: #eceff1;
+    color: #000;
 }
 
 .cards {
@@ -344,31 +368,16 @@ ul {
 .card {
     --flow-space: 0.5em;
     --hsl: var(--hue), var(--saturation), var(--lightness);
-    flex: 1 1 14rem;
+    flex: 1 1 12rem;
     padding: 1.5em 2em;
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     align-items: start;
     gap: 1.25em;
-    color: #eceff1;
-    background-color: #2b2b2b;
+    color: black;
+    background-color: #fff;
     border: 1px solid #eceff133;
     border-radius: 15px;
-}
-
-.card:nth-child(1) {
-    --hue: 138.64;
-    --saturation: 100%;
-    --lightness: 34.71%;
-}
-
-.card:nth-child(2) {
-    --hue: 0;
-    --saturation: 0%;
-    --lightness: 86.67%;
-}
-
-.card:nth-child(3) {
     --hue: 204;
     --saturation: 100%;
     --lightness: 34.31%;
@@ -406,7 +415,7 @@ ul {
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #0d0d0d;
+    background-color: #00b137;
     padding: 0.7em;
     border-radius: 10px;
     font-size: 1rem;
@@ -458,6 +467,7 @@ ul {
     background: hsla(var(--hsl), 0.1);
 }
 
+/*footer section*/
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -504,6 +514,14 @@ footer ul li a {
     transition: 0.4s;
 }
 
+footer ul li a::first-letter {
+    text-transform: capitalize;
+}
+
+footer ul li a[href='mailto:chwist.dawid@icloud.com']::first-letter {
+    text-transform: none !important;
+}
+
 footer ul li a:hover {
     color: white;
     padding-left: 2px;
@@ -545,6 +563,7 @@ footer ul li a:hover {
     }
 }
 
+/* scroll button styles */
 .to-top {
     background: var(--blue);
     z-index: 999;
@@ -571,22 +590,7 @@ footer ul li a:hover {
     opacity: 1;
 }
 
-@media (max-width: 840px) {
-    .menu {
-        display: none;
-    }
-}
-
-@media (max-width: 520px) {
-    .navbar {
-        flex-direction: column;
-    }
-
-    .navbar .lek4you {
-        margin-top: 2vh;
-    }
-}
-
+/* language switch button styling */
 .switch {
     z-index: 999;
     position: fixed;
@@ -689,9 +693,71 @@ input.check-toggle-round-flat + label:after {
     transition: margin 0.2s;
 }
 
-input.check-toggle-round-flat:checked + label {
-}
-
 input.check-toggle-round-flat:checked + label:after {
     margin-left: 44px;
+}
+
+/* Stylizacja sekcji parallax */
+.parallax {
+    background-image: url('../img/R.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.parallax#second {
+    background-image: url('../img/R2.jpg');
+}
+
+.parallax#first .parallax-content img {
+    max-width: 600px;
+    width: 90vw;
+}
+
+.parallax#first h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.parallax-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 650px;
+}
+
+.parallax-content h2 {
+    margin: 0;
+    font-size: 2em;
+    padding: 0 5vw;
+}
+
+.parallax-content h1,
+.parallax-content h2 {
+    color: #333;
+}
+.parallax-content p {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.parallax-content .green {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.parallax-content .blue {
+    color: var(--blue);
+    font-weight: 700;
 }

@@ -1,22 +1,21 @@
-import { initStickyNavbar } from './sticky'
-import { initTypedEffect } from './typedEffect'
 import { initOverlayCard } from './overlayCard'
-import { translatePageToEnglish } from './translate'
+import {
+    handleLanguageChange,
+    initLanguageSettings,
+    setupI18nextListeners
+} from './language'
+import { setupScrollEventListener } from './scrollEvents'
 
-window.addEventListener('scroll', () => initStickyNavbar())
+document.addEventListener('DOMContentLoaded', () => {
+    initOverlayCard()
+    setupScrollEventListener()
 
-let typed = initTypedEffect('.typing', false)
+    const changeLanguageButton = document.querySelector('#language-toggle')
+    initLanguageSettings(changeLanguageButton)
 
-document.body.addEventListener('pointermove', () => applyOverlayMask)
-initOverlayCard()
+    changeLanguageButton.addEventListener('change', () => {
+        handleLanguageChange(changeLanguageButton)
+    })
 
-const changeLanguageButton = document.querySelector('#language-toggle')
-changeLanguageButton.addEventListener('change', () => {
-    if (changeLanguageButton.checked) {
-        typed.destroy()
-        typed = initTypedEffect('.typing', true)
-        translatePageToEnglish()
-    } else {
-        window.location.reload()
-    }
+    setupI18nextListeners()
 })
