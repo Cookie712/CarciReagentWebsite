@@ -1,4 +1,3 @@
-import { initOverlayCard } from './overlayCard'
 import {
     handleLanguageChange,
     initLanguageSettings,
@@ -7,7 +6,6 @@ import {
 import { setupScrollEventListener } from './scrollEvents'
 
 document.addEventListener('DOMContentLoaded', () => {
-    initOverlayCard()
     setupScrollEventListener()
 
     const changeLanguageButton = document.querySelector('#language-toggle')
