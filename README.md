@@ -11,7 +11,7 @@ Carci Reagent to innowacyjny test diagnostyczny IVD, który umożliwia samodziel
 
 -   npm install
 
-### lub jeśli używasz yarn
+#### lub jeśli używasz yarn
 
 -   yarn install
 
