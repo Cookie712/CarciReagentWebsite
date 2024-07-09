@@ -432,7 +432,7 @@ input.check-toggle-round-flat:checked + label:after {
     border-radius: 10px;
     text-align: center;
     max-width: 650px;
-    margin: 20vh 0;
+    margin: 20vh 0 10vh;
 }
 
 .about-info h2 {
