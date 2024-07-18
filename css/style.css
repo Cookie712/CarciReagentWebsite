@@ -202,30 +202,6 @@ input.check-toggle-round-flat:checked + label:after {
     justify-content: space-between;
 }
 
-@media (max-width: 1100px) {
-    .navbar .menu {
-        display: none;
-    }
-}
-
-@media (max-width: 700px) {
-    .navbar .logo {
-        max-width: 90%;
-    }
-
-    .navbar .lek4you {
-        display: none;
-    }
-    .navbar {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .navbar.sticky {
-        padding: 1.5vw 0 !important;
-    }
-}
-
 .navbar.sticky {
     padding: 1.5vw 10vh;
     background: rgba(255, 255, 255, 0.2);
@@ -235,18 +211,7 @@ input.check-toggle-round-flat:checked + label:after {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .lek4you p {
-    text-align: center;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.navbar .lek4you img {
-    max-width: 150px;
-}
-
 .navbar .logo {
-    margin-left: 10vw;
     display: flex;
     align-items: center;
 }
@@ -287,6 +252,25 @@ input.check-toggle-round-flat:checked + label:after {
 
 .navbar .menu li a:hover {
     color: var(--blue);
+}
+
+@media (max-width: 900px) {
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .logo {
+        max-width: 90%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar.sticky {
+        padding: 1.5vw 0 !important;
+    }
 }
 
 @media (max-width: 370px) {
