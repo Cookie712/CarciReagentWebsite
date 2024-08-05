@@ -1,27 +1,30 @@
 {
     "distributor": "Distributor in Poland ",
-    "productHeader": "Early diagnosis means<br/> a big opportunity for recovery",
+    "productHeader": "Prevention and self-control <br/> increases your chance of accurate diagnosis and proper treatment",
     "productDescription": "Carci Reagent is a test to<br/> support the diagnosis of cancer.",
     "nav1" : "Where to buy?",
     "nav2" : "About product",
     "nav3" : "Contact",
     "sellerInformation": "Our <span class='green'>Carci Reagent</span> test will soon be available in selected online stores",
     "aboutProductHeader" : "Early detection of the disease significantly increases the chances of recovery.",
-    "aboutProductInformation": "Carci Reagent is an innovative <span class='blue'>diagnostic IVD test</span> that allows you to self-monitor your health. By detecting serious diseases early, it significantly increases the chances of successful treatment and recovery. It is a <span class='blue'> medical device</span> designed to provide users with the ability to make a quick and easy diagnosis from the comfort of their homes.",
+    "aboutProductInformation": "Carci Reagent is a novelty on the Polish market of medical devices. The Carci Reagent medical device is a test for initial in vitro diagnostics for self-monitoring. Early diagnosis in the case of serious diseases, including cancer, significantly increases your chances of successful treatment and recovery. Carci Reagent is a medical device designed to support professional diagnostics in a comfortable and safe way for the patient.",
     "developerHeader": "Developer",
     "socialMediaHeader": "Follow",
     "carciReagentLink1": "certificates",
-    "carciReagentLink2": "instructins",
-    "carciReagentLink3": "studies",
+    "carciReagentLink2": "manuals",
+    "carciReagentLink3": "scientific materials",
     "carciReagentLink4": "news",
-    "carciReagentLink5": "results",
+    "carciReagentLink5": "results gallery",
     "lek4youLink1": "about us",
     "lek4youLink2": "customer zone",
     "lek4youLink3": "clinical trials",
     "contactHeader": "Contact",
     "cart1": "Detailed description",
     "cart2": "Certificates",
-    "cart3": "Instructions"
+    "cart3": "Manuals",
+    "producer": "Producer CNEU MEDICAL s.r.o.",
+    "producerAdress": "Jeřábkova 1459/8, Chodov, 149 00 Praga 4, Czech Republic<br />Numer identyfikacyjny: 082 90 458",
+    "legalDisclaimer": "This is a medical device. Use it according to the instructions for use or label."
     
    
     

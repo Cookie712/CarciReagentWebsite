@@ -273,6 +273,13 @@ input.check-toggle-round-flat:checked + label:after {
     }
 }
 
+@media (max-width: 400px) {
+    .switch {
+        left: 1px;
+        bottom: 1px;
+    }
+}
+
 @media (max-width: 370px) {
     .navbar .logo a span {
         display: none;
@@ -317,7 +324,8 @@ input.check-toggle-round-flat:checked + label:after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 80%;
+    max-width: 50%;
+    width: 250px;
 }
 
 .home #product {
@@ -385,7 +393,7 @@ input.check-toggle-round-flat:checked + label:after {
 
 /* parallax section styling */
 .parallax {
-    background-image: url('../img/R.jpg');
+    background-image: url('../img/RR.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -512,6 +520,7 @@ input.check-toggle-round-flat:checked + label:after {
     max-height: 40px;
     opacity: 1;
     transition: 0.3s linear;
+    text-align: center;
 }
 
 .cart:hover p,
@@ -548,7 +557,7 @@ ul {
 }
 
 .footer-col h4,
-footer .lek4you p {
+footer .info h1 {
     position: relative;
     margin-bottom: 30px;
     font-weight: 400;
@@ -611,18 +620,32 @@ footer ul li a:hover {
     background-color: white;
 }
 
-footer .lek4you {
+footer .info {
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 60px;
 }
 
-footer .lek4you p {
+footer .info h1 {
     margin-bottom: 10px;
 }
 
-footer .lek4you img {
+footer .info:last-child p {
+    margin-bottom: 0;
+    position: relative;
+}
+
+footer .info:last-child {
+    margin-bottom: 0;
+}
+
+footer .info img {
     max-width: 150px;
+}
+
+footer .info p {
+    color: #bdb6b6;
 }
 
 @media (max-width: 740px) {
@@ -636,7 +659,7 @@ footer .lek4you img {
         all: unset;
     }
 
-    footer .lek4you img {
+    footer .info img {
         max-width: 120px;
     }
 }
