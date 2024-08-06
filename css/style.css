@@ -669,3 +669,12 @@ footer .info p {
         width: 100%;
     }
 }
+
+.navbar {
+    transition: background 0.3s ease;
+}
+
+.navbar.dark-background {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
