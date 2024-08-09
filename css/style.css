@@ -331,6 +331,7 @@ input.check-toggle-round-flat:checked + label:after {
 .home #product {
     transform: rotate(1deg);
     margin-right: 5vw;
+    padding-left: 5vw;
 }
 
 @media (max-width: 1200px) {
@@ -670,6 +671,7 @@ footer .info p {
     }
 }
 
+/* dark theme*/
 .navbar {
     transition: background 0.3s ease;
 }
