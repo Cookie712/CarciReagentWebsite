@@ -7,14 +7,16 @@ i18next
     .use(LanguageDetector)
     .init({
         fallbackLng: 'pl',
-        debug: true,
+        debug: false,
         backend: {
             loadPath: '/locales/{{lng}}/translation.json'
         },
         interpolation: {
             escapeValue: false
         },
-        lng: 'pl'
+        lng: localStorage.getItem('language') || 'pl',
+        initImmediate: false,
+        preload: ['pl']
     })
 
 export default i18next

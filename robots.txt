@@ -1,0 +1,18 @@
+# Zezwolenie na indeksowanie plików statycznych i strony głównej
+User-agent: *
+Allow: /assets/
+Allow: /files/
+Allow: /locales/
+Allow: /index.html
+
+# Blokowanie dostępu do katalogów i plików konfiguracyjnych
+Disallow: /node_modules/
+Disallow: /site.webmanifest
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
+Disallow: /README.md
+
+# Wskazanie na mapę witryny 
+Sitemap: https://www.carcireagent.pl/sitemap.xml

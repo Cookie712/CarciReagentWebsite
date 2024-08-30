@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupScrollEventListener()
 
     const changeLanguageButton = document.querySelector('#language-toggle')
+
     initLanguageSettings(changeLanguageButton)
 
     changeLanguageButton.addEventListener('change', () => {
