@@ -19,4 +19,4 @@ Carci Reagent to innowacyjny test diagnostyczny IVD, który umożliwia samodziel
 
 -   Ten projekt jest licencjonowany na warunkach licencji MIT
 
-[text](pdf/carciReagent.pdf)
+[text](files/carciReagent.pdf)
