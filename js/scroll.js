@@ -1,3 +1,5 @@
+import debounce from './debounce'
+
 export function initScrollButton() {
     const scrollThreshold = 100
     const activeClass = 'active'
@@ -7,5 +9,12 @@ export function initScrollButton() {
         return
     }
 
-    toTop.classList.toggle(activeClass, window.scrollY > scrollThreshold)
+    const handleScroll = () => {
+        const shouldBeActive = window.scrollY > scrollThreshold
+        if (toTop.classList.contains(activeClass) !== shouldBeActive) {
+            toTop.classList.toggle(activeClass, shouldBeActive)
+        }
+    }
+    const debouncedHandleScroll = debounce(handleScroll)
+    window.addEventListener('scroll', debouncedHandleScroll)
 }
