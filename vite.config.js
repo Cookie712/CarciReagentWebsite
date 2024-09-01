@@ -12,6 +12,14 @@ export default defineConfig({
                 {
                     src: 'files',
                     dest: ''
+                },
+                {
+                    src: 'sitemap.xml',
+                    dest: ''
+                },
+                {
+                    src: 'robots.txt',
+                    dest: ''
                 }
             ]
         })
