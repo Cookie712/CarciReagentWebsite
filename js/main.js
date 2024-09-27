@@ -4,6 +4,7 @@ import {
     setupI18nextListeners
 } from './language'
 import { setupScrollEventListener } from './scrollEvents'
+import defineLazyLoading from './lazyLoading'
 
 document.addEventListener('DOMContentLoaded', () => {
     setupScrollEventListener()
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     setupI18nextListeners()
+    defineLazyLoading()
 })
